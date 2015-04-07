@@ -4,6 +4,8 @@ apt-get install -y \
         libncurses5-dev \
         openssl \
         libssl-dev \
+        libatomic-ops\
+        libatomic-ops-dev \
         fop \
         xsltproc \
         unixodbc-dev \
