@@ -36,6 +36,8 @@ RUN apt-get install -y \
         libwxgtk2.8-dev \
         libwxbase2.8-0 \
         libwxbase2.8-dev \ 
+        libglu1-mesa \
+        libglu1-mesa-dev \
         fop \
         xsltproc \
         unixodbc \
