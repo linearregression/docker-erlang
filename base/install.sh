@@ -4,7 +4,7 @@ apt-get install -y \
         libncurses5-dev \
         openssl \
         libssl-dev \
-        libatomic-ops\
+        libatomic1\
         libatomic-ops-dev \
         fop \
         xsltproc \
