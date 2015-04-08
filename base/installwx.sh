@@ -6,6 +6,7 @@ apt-get install -y \
         libssl-dev \
         libatomic1 \
         libatomic-ops-dev \
+        wx2.8-headers \
         libwxgtk2.8 \
         libwxgtk2.8-dev \
         libwxbase2.8-0 \
