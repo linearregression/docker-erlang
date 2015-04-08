@@ -20,5 +20,5 @@ done
 for version in ${versions}; do
         mkdir -p $version-wxtools
         sed "s/^ENV ERLANG_VERSION \(.*\)/ENV ERLANG_VERSION ${version}/g" base/Dockerfile > ${version}-wxtools/Dockerfile
-        cp base/install.sh ${version}-wxtools/installwx.sh
+        cp base/installwx.sh ${version}-wxtools/install.sh
 done
