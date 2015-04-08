@@ -22,7 +22,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN echo ${ERLANG_VERSION}
-RUN mkdir -p ${DOWNDLOAD} && ls -l ${DOWNDLOAD}
+RUN mkdir -p ${DOWNDLOAD} && echo `ls -l ${DOWNDLOAD}`
 
 RUN apt-get update
 RUN apt-get install -y \
