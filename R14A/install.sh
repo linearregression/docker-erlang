@@ -8,6 +8,7 @@ apt-get install -y \
         libatomic-ops-dev \
         fop \
         xsltproc \
+        unixodbc \
         unixodbc-dev \
         automake \
         build-essential \
