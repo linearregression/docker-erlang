@@ -40,7 +40,7 @@ RUN apt-get install -y \
         curl \
         wget
 
-RUN wget http://erlang.org/download/otp_src_$ERLANG_VERSION.tar.gz -P $DOWNDLOAD
+RUN curl http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz -P ${DOWNDLOAD}
 
 RUN cd ${DOWNDLOAD} \
     && tar zxf otp_src_${ERLANG_VERSION}.tar.gz \
