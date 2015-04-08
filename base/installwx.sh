@@ -20,6 +20,8 @@ apt-get install -y \
         curl \
         wget \
         git
+# check for wx-config exists
+wx-config --libs
 
 mkdir -p /usr/src/erlang
 #curl -G --data-binary http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz -O /usr/src/erlang/otp_src_${ERLANG_VERSION}.tar.gz
