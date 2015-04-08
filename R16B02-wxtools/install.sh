@@ -4,8 +4,9 @@ apt-get install -y \
         libncurses5-dev \
         openssl \
         libssl-dev \
-        libatomic1\
+        libatomic1 \
         libatomic-ops-dev \
+        wx2.8-headers \
         libwxgtk2.8 \
         libwxgtk2.8-dev \
         libwxbase2.8-0 \
@@ -19,6 +20,8 @@ apt-get install -y \
         curl \
         wget \
         git
+# check for wx-config exists
+wx-config --libs
 
 mkdir -p /usr/src/erlang
 #curl -G --data-binary http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz -O /usr/src/erlang/otp_src_${ERLANG_VERSION}.tar.gz
