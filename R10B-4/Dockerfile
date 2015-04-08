@@ -23,7 +23,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN echo ${ERLANG_VERSION}
 RUN mkdir -p ${DOWNDLOAD}
-RUN wget http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz -P ${DOWNDLOAD}
+RUN wget http://erlang.org/download/otp_src_$ERLANG_VERSION.tar.gz -P $DOWNDLOAD
 
 RUN apt-get update
 RUN apt-get install -y \

@@ -11,7 +11,7 @@ RUN apt-get update
 
 ENV ERLANG_VERSION R15B03-1
 ENV ERL_EPMD_PORT 4369
-ENV DOWNDLOAD /usr/src/erlang
+ENV DOWNDLOAD '/usr/src/erlang'
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -23,7 +23,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN echo ${ERLANG_VERSION}
 RUN mkdir -p ${DOWNDLOAD}
-RUN wget http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz -P ${DOWNDLOAD}
+RUN wget http://erlang.org/download/otp_src_$ERLANG_VERSION.tar.gz -P ${DOWNDLOAD
 
 RUN apt-get update
 RUN apt-get install -y \
