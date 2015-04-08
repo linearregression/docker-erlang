@@ -14,11 +14,11 @@ echo '# maintainer: Federico Carrone <federico.carrone@gmail.com> @(fedcarrone)'
 for version in ${versions}; do
         mkdir -p $version
         sed "s/^ENV ERLANG_VERSION \(.*\)/ENV ERLANG_VERSION ${version}/g" base/Dockerfile > ${version}/Dockerfile
-        cp base/install.sh ${version}/install.sh
+        #cp base/install.sh ${version}/install.sh
 done
 
 for version in ${versions}; do
         mkdir -p $version-wxtools
-        sed "s/^ENV ERLANG_VERSION \(.*\)/ENV ERLANG_VERSION ${version}/g" base/Dockerfile > ${version}-wxtools/Dockerfile
-        cp base/installwx.sh ${version}-wxtools/install.sh
+        sed "s/^ENV ERLANG_VERSION \(.*\)/ENV ERLANG_VERSION ${version}/g" base/DockerfileWx > ${version}-wxtools/Dockerfile
+        #cp base/installwx.sh ${version}-wxtools/install.sh
 done
