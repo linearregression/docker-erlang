@@ -11,7 +11,7 @@ RUN apt-get update
 
 ENV ERLANG_VERSION R15B02_with_MSVCR100_installer_fix
 ENV ERL_EPMD_PORT 4369
-ENV DOWNDLOAD '/usr/src/erlang'
+ENV DOWNDLOAD /usr/src/erlang
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root

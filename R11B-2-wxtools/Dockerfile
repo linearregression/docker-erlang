@@ -11,7 +11,7 @@ RUN apt-get update
 
 ENV ERLANG_VERSION R11B-2
 ENV ERL_EPMD_PORT 4369
-ENV DOWNDLOAD '/usr/src/erlang'
+ENV DOWNDLOAD /usr/src/erlang
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
