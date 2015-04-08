@@ -4,7 +4,7 @@ apt-get install -y \
         libncurses5-dev \
         openssl \
         libssl-dev \
-        libatomic1\
+        libatomic1 \
         libatomic-ops-dev \
         libwxgtk2.8 \
         libwxgtk2.8-dev \
