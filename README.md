@@ -18,11 +18,11 @@ Use it to try out the erlang shell, as an erlang development environment, or use
 Start a throwaway instance of the erlang shell
 
 ```bash
-docker run -it --rm unbalancedparentheses/erlang
+docker run -it --rm edwardt/docker-erlang
 ```
 
 Run a container to use a development environment
 
 ```bash
-docker run -it --name erlang-dev unbalancedparentheses/erlang /bin/bash
+docker run -it --name erlang-dev edwardt/docker-erlang /bin/bash
 ```
