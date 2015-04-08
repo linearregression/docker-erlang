@@ -5,7 +5,7 @@ Docker Image packaging for Erlang
 
 #What is it?
 
-Docker container images that include [Erlang/OTP](http://www.erlang.org/), along with the [rebar](https://github.com/rebar/rebar) and [relx](https://github.com/erlware/relx) build and release tools.
+Docker container images that include [Erlang/OTP](http://www.erlang.org/). Rebar and Relx are not part of official Erlang distribution and each has its own release cycle. If you need those tools, you need to add those yourself.
 
 The latest versions of Erlang/OTP are provided as tags.
 
