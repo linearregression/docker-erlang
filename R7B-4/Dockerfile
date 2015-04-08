@@ -22,8 +22,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN echo ${ERLANG_VERSION}
-RUN mkdir -p ${DOWNDLOAD}
-RUN wget http://erlang.org/download/otp_src_$ERLANG_VERSION.tar.gz -P $DOWNDLOAD
+RUN mkdir -p ${DOWNDLOAD} && ls -l ${DOWNDLOAD}
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -40,6 +39,8 @@ RUN apt-get install -y \
         build-essential \
         curl \
         wget
+
+RUN curl -d –silent –output ${DOWNDLOAD}/otp_src_${ERLANG_VERSION}.tar.gz http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz 
 
 RUN cd ${DOWNDLOAD} \
     && tar zxf otp_src_${ERLANG_VERSION}.tar.gz \
