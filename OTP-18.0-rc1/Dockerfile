@@ -43,8 +43,7 @@ RUN apt-get install -y \
 
 RUN git clone --depth 1 --branch OTP-18.0-rc1 https://github.com/erlang/otp.git && mv otp ${DOWNDLOAD}
 
-RUN cd ${DOWNDLOAD} \
-    && cd otp \
+RUN cd otp \
     && ./configure --enable-threads--enable-smp-support --enable-kernel-poll --enable-fp-exceptions --enable-m64-build --with-termcap --without-javac --with-ssh --with-libatomic_ops --enable-dirty-schedulers \
     && make \
     && make install \
