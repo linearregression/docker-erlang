@@ -41,7 +41,7 @@ RUN apt-get install -y \
         wget \
         git
 
-RUN git clone --depth 1 --branch OTP-18.0-rc1 https://github.com/erlang/otp.git 
+RUN git clone --depth 1 --branch OTP-18.0-rc1 https://github.com/erlang/otp.git && mv otp ${DOWNDLOAD}
 
 RUN cd ${DOWNDLOAD} \
     && cd otp \
