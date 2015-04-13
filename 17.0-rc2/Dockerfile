@@ -7,7 +7,7 @@ MAINTAINER Federico Carrone <federico.carrone@gmail.com>
 # old cached versions when the Dockerfile is built.
 ENV REFRESHED_AT 2015-02-12
 
-RUN apt-get update
+RUN sudo rm /var/lib/apt/lists/* -vf && apt-get update
 
 ENV ERLANG_VERSION 17.0-rc2
 ENV ERL_EPMD_PORT 4369
