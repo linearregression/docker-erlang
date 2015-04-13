@@ -42,6 +42,8 @@ RUN apt-get install -y \
 
 RUN curl -o ${DOWNDLOAD}/otp_src_${ERLANG_VERSION}.tar.gz http://erlang.org/download/otp_src_${ERLANG_VERSION}.tar.gz 
 
+RUN export CFLAGS="$CFLAGS -std=gnu++11"
+
 RUN cd ${DOWNDLOAD} \
     && tar zxf otp_src_${ERLANG_VERSION}.tar.gz \
     && cd otp_src_${ERLANG_VERSION} \
