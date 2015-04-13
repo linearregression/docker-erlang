@@ -48,10 +48,10 @@ RUN apt-get install -y \
         wget \
         git 
 
-RUN git clone --depth 1 --branch OTP-18.0-rc1 https://github.com/erlang/otp.git && mv otp ${DOWNDLOAD}
+RUN git clone --quiet --depth 1 --branch OTP-18.0-rc1 https://github.com/erlang/otp.git && mv otp ${DOWNDLOAD}
 
 RUN cd ${DOWNDLOAD}/otp \
-    && ./configure --enable-threads--enable-smp-support --enable-kernel-poll --enable-fp-exceptions --enable-m64-build --with-termcap --without-javac --with-ssh --with-libatomic_ops --enable-dirty-schedulers \
+    && ./otp_build setup -a --enable-threads--enable-smp-support --enable-kernel-poll --enable-fp-exceptions --enable-m64-build --with-termcap --without-javac --with-ssh --with-libatomic_ops --enable-dirty-schedulers \
     && make \
     && make install \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/*
