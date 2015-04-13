@@ -55,6 +55,7 @@ RUN cd ${DOWNDLOAD} \
     && tar zxf otp_src_${ERLANG_VERSION}.tar.gz \
     && cd otp_src_${ERLANG_VERSION} \
     && ./configure --enable-threads--enable-smp-support --enable-kernel-poll --enable-fp-exceptions --enable-m64-build --with-termcap --without-javac --with-ssh --with-libatomic_ops --enable-dirty-schedulers \
+    && echo ${CFLAGS} \
     && make \
     && make install \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/*
