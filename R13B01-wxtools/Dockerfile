@@ -24,8 +24,7 @@ ENV LC_ALL en_US.UTF-8
 RUN echo ${ERLANG_VERSION}
 RUN mkdir -p ${DOWNDLOAD} && echo `ls -l ${DOWNDLOAD}`
 
-RUN sudo rm /var/lib/apt/lists/* -vf && 
-apt-get update
+RUN apt-get update
 RUN apt-get install -y \
         libncurses5-dev \
         openssl \
